@@ -1,11 +1,12 @@
 import { dashboard } from './dashboard';
-import { utilities } from './utilities';
-import { other } from './other';
+import { dqmis } from './dqmis';
+import { cervicalcancer } from './cervival-cancer';
+import { smartcarereports } from './smartcare-reports';
 
 //-----------------------|| MENU ITEMS ||-----------------------//
 
 const menuItems = {
-    items: [dashboard, utilities, other]
+    items: [dashboard, dqmis, cervicalcancer, smartcarereports ]
 };
 
 export default menuItems;

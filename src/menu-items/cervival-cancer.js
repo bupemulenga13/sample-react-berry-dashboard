@@ -8,18 +8,18 @@ const icons = {
     IconDeviceAnalytics
 };
 
-//-----------------------|| DASHBOARD MENU ITEMS ||-----------------------//
+//-----------------------|| CERVICAL CANCER MENU ITEMS ||-----------------------//
 
-export const dashboard = {
-    id: 'dashboard',
-    title: 'Dashboard',
+export const cervicalcancer = {
+    id: 'cervical-cancer',
+    title: 'Cervical Cancer',
     type: 'group',
     children: [
         {
             id: 'default',
-            title: 'Dashboard',
+            title: 'Cervical Cancer',
             type: 'item',
-            url: '/dashboard/default',
+            url: '/utils/util-color',
             icon: icons['IconDashboard'],
             breadcrumbs: false
         }

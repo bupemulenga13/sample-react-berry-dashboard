@@ -16,8 +16,9 @@ const UtilsShadow = Loadable(lazy(() => import('../views/utilities/Shadow')));
 const UtilsMaterialIcons = Loadable(lazy(() => import('../views/utilities/MaterialIcons')));
 const UtilsTablerIcons = Loadable(lazy(() => import('../views/utilities/TablerIcons')));
 
-// sample page routing
-const SamplePage = Loadable(lazy(() => import('../views/sample-page')));
+// appointments routing
+const AppointemntsTable = Loadable(lazy(() => import('../views/pages/Appointments')));
+
 
 //-----------------------|| MAIN ROUTING ||-----------------------//
 
@@ -28,6 +29,7 @@ const MainRoutes = () => {
         <Route
             path={[
                 '/dashboard/default',
+                '/appointments/appointments-table',
 
                 '/utils/util-typography',
                 '/utils/util-color',
@@ -35,21 +37,18 @@ const MainRoutes = () => {
                 '/icons/tabler-icons',
                 '/icons/material-icons',
 
-                '/sample-page'
             ]}
         >
             <MainLayout>
                 <Switch location={location} key={location.pathname}>
                     <AuthGuard>
                         <Route path="/dashboard/default" component={DashboardDefault} />
-
+                        <Route path="/appointments/appointments-table" component={AppointemntsTable} />
                         <Route path="/utils/util-typography" component={UtilsTypography} />
                         <Route path="/utils/util-color" component={UtilsColor} />
                         <Route path="/utils/util-shadow" component={UtilsShadow} />
                         <Route path="/icons/tabler-icons" component={UtilsTablerIcons} />
                         <Route path="/icons/material-icons" component={UtilsMaterialIcons} />
-
-                        <Route path="/sample-page" component={SamplePage} />
                     </AuthGuard>
                 </Switch>
             </MainLayout>

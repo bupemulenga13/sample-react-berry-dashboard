@@ -127,6 +127,7 @@ const ProfileSection = () => {
     const [sdm, setSdm] = React.useState(true);
     const [value, setValue] = React.useState('');
     const [notification, setNotification] = React.useState(false);
+    // eslint-disable-next-line
     const [selectedIndex, setSelectedIndex] = React.useState(1);
 
     const [open, setOpen] = React.useState(false);
